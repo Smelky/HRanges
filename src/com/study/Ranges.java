@@ -2,14 +2,13 @@ package com.study;
 
 import java.util.Arrays;
 
-public class HRanges {
+public class Ranges {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 5, 8, 9, 10, 13, 14, 15, 16, 18};
-        calculate(arr.length, arr);
+        findRanges(arr.length, arr);
     }
 
-    public static void calculate(int length, int[] arr) {
-
+    public static void findRanges(int length, int[] arr) {
         int minInRange = arr[0];
         int maxInRange = 0;
 
@@ -17,15 +16,15 @@ public class HRanges {
             if ((maxInRange + 1) == arr[i]) {
                 maxInRange++;
             } else {
-                output(minInRange, maxInRange);
+                printRanges(minInRange, maxInRange);
                 maxInRange = arr[i];
                 minInRange = arr[i];
             }
         }
-        output(minInRange, maxInRange);
+        printRanges (minInRange, maxInRange);
     }
 
-    public static void output(int minInRange, int maxInRange) {
+    private static void printRanges(int minInRange, int maxInRange) {
         if (minInRange == maxInRange) {
             System.out.println("[" + maxInRange + "]");
         } else {
