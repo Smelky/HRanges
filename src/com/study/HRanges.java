@@ -17,18 +17,18 @@ public class HRanges {
             if ((maxInRange + 1) == arr[i]) {
                 maxInRange++;
             } else {
-                output (minInRange, maxInRange);
+                output(minInRange, maxInRange);
                 maxInRange = arr[i];
                 minInRange = arr[i];
-
             }
         }
-        output (minInRange, maxInRange);
+        output(minInRange, maxInRange);
     }
-    public static void output (int minInRange, int maxInRange){
-        if (minInRange == maxInRange){
+
+    public static void output(int minInRange, int maxInRange) {
+        if (minInRange == maxInRange) {
             System.out.println("[" + maxInRange + "]");
-        }else {
+        } else {
             System.out.println("[" + minInRange + " " + maxInRange + "]");
         }
     }
